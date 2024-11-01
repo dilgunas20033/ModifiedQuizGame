@@ -1,33 +1,17 @@
-#include <iostream>
-#include "info.h"
-#include "category.h"
-#include "game.h"
+//
+// Created by dilgu on 10/31/2024.
+//
+
 #include "stats.h"
+#include <iostream>
 
 
-int main() {
-    info info;
-    category cat;
+void stats::stat() {
+
     game score;
-    stats stat;
+    info info; 
 
-
-    char again;
-
-    info.getName();
-
-    do {
-
-        cat.select(&score);
-
-        std::cout << "Play Again?\n(Y/N)" << std::endl << "->";
-        std::cin >> again;
-
-    }while (again == 'Y' || again == 'y');
-
-    stat.stat();
-
-/*    std::cout << "Quiz Game Stats: " << std::endl << "=========================" << std::endl;
+    std::cout << "Quiz Game Stats: " << std::endl << "=========================" << std::endl;
 
     std::cout << "Player " << info.name << " is " << info.age << ". Below are the stats for today!"
               << std::endl << std::endl;
@@ -39,7 +23,6 @@ int main() {
     std::cout << "Math: " << score.points.math << "/10" << std::endl;
     std::cout << "Tech: " << score.points.tech << "/10" << std::endl;
     std::cout << "Sports: " << score.points.sports << "/10" << std::endl;
-    std::cout << "History: " << score.points.history << "/10" << std::endl; */
+    std::cout << "History: " << score.points.history << "/10" << std::endl;
 
-    return 0;
 }

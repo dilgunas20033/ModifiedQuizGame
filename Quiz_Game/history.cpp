@@ -108,13 +108,13 @@ int game::history() {
         std::cout << std::endl << "Sorry, the correct answer is 1988." << std::endl << std::endl;
     }
 
-    std::cout << "9) What Year was WW2?(Answer can be during WW2)" << std::endl << "->";
+    std::cout << "9) What Year did WW2 Start?" << std::endl << "->";
     std::cin >> num;
-    if ( 1938 < num && num < 1946) {
+    if (answer == "1939") {
         std::cout << std::endl << "Correct!" << std::endl << std::endl;
         points.history++;
     } else {
-        std::cout << std::endl << "Sorry, the correct answer is between 1939 and 1945." << std::endl << std::endl;
+        std::cout << std::endl << "Sorry, the correct answer is 1939." << std::endl << std::endl;
     }
 
     std::cout << "10) Who is the 16th president?"<< std::endl

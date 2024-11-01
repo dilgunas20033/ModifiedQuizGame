@@ -17,4 +17,6 @@ add_executable(Quiz_Game main.cpp
         tech.cpp
         sports.cpp
         history.cpp
+        stats.cpp
+        stats.h
 )

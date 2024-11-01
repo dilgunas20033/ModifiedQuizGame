@@ -54,14 +54,14 @@ int game::sports() {
         std::cout << std::endl << "Sorry, the correct answer is Los Angeles." << std::endl << std::endl;
     }
 
-    std::cout << "5) What does NBA stand for?" << std::endl << "->";
+    std::cout << "5) NBA is for what sport?" << std::endl << "->";
     std::cin >> answer;
     answer = cat.convertToLowercase(answer);
-    if (answer == "national basketball association") {
+    if (answer == "basketball") {
         std::cout << std::endl << "Correct!" << std::endl << std::endl;
         points.sports++;
     } else {
-        std::cout << std::endl << "Sorry, the correct answer is National Basketball Association."
+        std::cout << std::endl << "Sorry, the correct answer is basketball."
                   << std::endl << std::endl;
     }
 
