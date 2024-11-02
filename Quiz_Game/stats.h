@@ -13,18 +13,19 @@
 
 class stats : public game {
 public:
-    explicit stats(game &scoreRef) : categories({
-        {"Gaming",       &scoreRef.points.gaming},
-        {"Food",         &scoreRef.points.food},
-        {"Movies/Shows", &scoreRef.points.moviesShows},
-        {"Music",        &scoreRef.points.music},
-        {"Math",         &scoreRef.points.math},
-        {"Tech",         &scoreRef.points.tech},
-        {"Sports",       &scoreRef.points.sports},
-        {"History",      &scoreRef.points.history}
+    explicit stats(game &score) : categories({
+        {"Gaming",       &score.points.gaming},
+        {"Food",         &score.points.food},
+        {"Movies/Shows", &score.points.moviesShows},
+        {"Music",        &score.points.music},
+        {"Math",         &score.points.math},
+        {"Tech",         &score.points.tech},
+        {"Sports",       &score.points.sports},
+        {"History",      &score.points.history}
     }) {}
 
-    void stat(const info &playerInfo, const game &score);
+    void stat(const info& info);
+    void statSave(const info& info);
 
 private:
     std::vector<std::pair<std::string, int *>> categories;

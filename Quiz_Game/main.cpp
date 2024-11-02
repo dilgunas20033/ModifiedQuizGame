@@ -4,7 +4,6 @@
 #include "game.h"
 #include "stats.h"
 
-
 int main() {
     info info;
     category cat;
@@ -25,7 +24,7 @@ int main() {
 
     }while (again == 'Y' || again == 'y');
 
-    stat.stat(info, score);
+    stat.stat(info);
 
     return 0;
 }
