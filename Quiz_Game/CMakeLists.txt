@@ -19,4 +19,6 @@ add_executable(Quiz_Game main.cpp
         history.cpp
         stats.cpp
         stats.h
+        viewStat.cpp
+        viewStat.h
 )

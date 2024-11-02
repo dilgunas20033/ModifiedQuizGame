@@ -3,15 +3,19 @@
 #include "category.h"
 #include "game.h"
 #include "stats.h"
+#include "viewStat.h"
+
 
 int main() {
     info info;
     category cat;
     game score;
     stats stat(score);
-
+    viewStat view;
 
     char again;
+
+    view.menu();
 
     info.getName();
 

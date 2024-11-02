@@ -22,7 +22,7 @@ void stats::stat(const info& info) {
         index++;
     }
 
-    std::cout << "\nWould you like to save?(Y/N)" << std::endl << "->";
+    std::cout << "\nWould you like to save?\n(Y/N)" << std::endl << "->";
     std::cin >> save;
     if (save == 'y' || save =='Y'){
         statSave(info);
@@ -39,7 +39,7 @@ void stats::statSave(const info& info) {
 
     std::ofstream saveStats("saved_stat.txt", std::ios::app);
 
-    saveStats << "Player: " << info.name << std::endl << "Age: " << info.age << std::endl;
+    saveStats << info.name << std::endl << info.age << std::endl;
 
     while (index < categories.size()) {
         saveStats << categories[index].first << ": " << *categories[index].second << "/10" << std::endl;
