@@ -9,7 +9,7 @@ int main() {
     info info;
     category cat;
     game score;
-    stats stat;
+    stats stat(score);
 
 
     char again;
@@ -25,7 +25,7 @@ int main() {
 
     }while (again == 'Y' || again == 'y');
 
-    stat.stat();
+    stat.stat(info, score);
 
 /*    std::cout << "Quiz Game Stats: " << std::endl << "=========================" << std::endl;
 
