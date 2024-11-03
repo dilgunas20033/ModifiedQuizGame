@@ -13,9 +13,6 @@ public:
 
     void menu();
     void view();
-    int stringToInt(const std::string& str);
-    std::string trim(const std::string& str);
-
 
 };
 

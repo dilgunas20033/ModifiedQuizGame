@@ -5,8 +5,6 @@
 #include "viewStat.h"
 #include <iostream>
 #include <string>
-#include <sstream>
-#include <algorithm>
 #include <cctype>
 #include <fstream>
 
@@ -32,8 +30,9 @@ void viewStat::menu() {
 
 void viewStat::view() {
 
-    std::string name;
-    int age;
+    std::string name, line, confirmName;
+    int age, confirmAge = 0;
+    bool nameFound = false;
 
     std::ifstream viewStat("saved_stat.txt");
 
@@ -43,10 +42,42 @@ void viewStat::view() {
     }
 
     std::cout << "Please provide the name:" << std::endl << "->";
-    std:: cin >> name;
+    std::cin >> name;
 
     std::cout << "Please provide the age:" << std::endl << "->";
     std:: cin >> age;
+
+    while (std::getline(viewStat, line)) {
+        if (line.empty()) continue;
+
+        if (!nameFound && isalpha(line[0])) {
+            confirmName = line;
+        }
+        else if (!nameFound) {
+            try {
+                confirmAge = std::stoi(line);
+            } catch (std::invalid_argument&) {
+                continue;
+            }
+
+            if (confirmName == name && confirmAge == age) {
+                nameFound = true;
+                std::cout << "\n\nName: " << confirmName << std::endl;
+                std::cout << "Age: " << confirmAge << std::endl << "-------------" << std::endl;
+            }
+        }
+
+        else if (nameFound) {
+            if (line == "------------------------") {
+                nameFound = false;
+                confirmName.clear();
+            } else {
+                std::cout << line << std::endl;
+            }
+        }
+    }
+    std::cout << std::endl;
+    viewStat.close();
 }
 
 
