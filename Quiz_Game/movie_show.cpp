@@ -10,6 +10,8 @@ int game::movieShow() {
 
     std::string answer, multiple;
 
+    points.moviesShows = 0;
+
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
     std::cout << "1) Who does Jim Halpert fall in love with in The Office?" << std::endl

@@ -17,6 +17,7 @@ int main() {
 
     view.menu();
 
+
     info.getName();
 
     do {

@@ -10,6 +10,8 @@ int game::math() {
 
     std::string answer;
 
+    points.math = 0;
+
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
     std::cout << "1) Lets start something simple, 2 + 2?" << std::endl << "->";

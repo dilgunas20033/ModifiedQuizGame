@@ -10,6 +10,8 @@ int game::tech() {
 
     std::string answer, multiple;
 
+    points.tech = 0;
+
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
     std::cout << "1) What does GUI stand for?" << std::endl

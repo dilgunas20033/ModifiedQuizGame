@@ -10,6 +10,8 @@ int game::food() {
 
     std::string answer, multiple;
 
+    points.food = 0;
+
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
     std::cout << "1) What is the base ingredient of gummy bears?" << std::endl

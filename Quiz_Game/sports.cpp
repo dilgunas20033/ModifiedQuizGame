@@ -11,6 +11,8 @@ int game::sports() {
     std::string answer, multiple;
     int num;
 
+    points.sports = 0;
+
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
     std::cout << "1) The Olympics are held every how many years?" << std::endl << "->";

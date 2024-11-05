@@ -11,6 +11,8 @@ int game::history() {
     std::string answer, multiple;
     int num;
 
+    points.history = 0;
+
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
     std::cout << "1) What year was the Declaration of Independence signed?" << std::endl << "->";

@@ -10,6 +10,8 @@ int game::gaming() {
 
     std::string answer, multiple;
 
+    points.gaming = 0;
+
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
     std::cout << "1) The character 'Bowser' is the primary antagonist of what series?" << std::endl << "->";
