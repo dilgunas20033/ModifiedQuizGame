@@ -1,9 +1,10 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: movie_show.cpp
+//Desc: This is the movie/show quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::movieShow() {
     category cat;
@@ -124,4 +125,4 @@ int game::movieShow() {
     std::cout << "You got " << points.moviesShows << " out of 10 for Movies/Shows" << std::endl << std::endl;
 
     return points.moviesShows;
-}
+}//movieShows Function

@@ -1,12 +1,10 @@
-//
-// Created by dilgu on 11/1/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: viewStat.cpp
+//Desc: This file is for viewing any save stats, it will ask for name and age, and it will search that text file until
+//      it hits the name and age.
 
 #include "viewStat.h"
-#include <iostream>
-#include <string>
-#include <cctype>
-#include <fstream>
 
 void viewStat::menu() {
 
@@ -25,8 +23,8 @@ void viewStat::menu() {
         } else {
             std::cout << "\nError! Please try again." << std::endl;
         }
-    } while (play);
-}
+    } while (play); // do/while loop
+}//menu Function
 
 void viewStat::view() {
 
@@ -39,7 +37,7 @@ void viewStat::view() {
     if (!viewStat){
         std::cout << "Can't open stats.";
         return;
-    }
+    }// if txt file isn't working or doesn't exist yet
 
     std::cout << "Please provide the name:" << std::endl << "->";
     std::cin >> name;
@@ -48,7 +46,9 @@ void viewStat::view() {
     std:: cin >> age;
 
     while (std::getline(viewStat, line)) {
-        if (line.empty()) continue;
+        if (line.empty()) {
+            continue;
+        }
 
         if (!nameFound && isalpha(line[0])) {
             confirmName = line;
@@ -60,7 +60,7 @@ void viewStat::view() {
                 continue;
             }
 
-            if (confirmName == name && confirmAge == age) {
+            if (confirmName == name && confirmAge == age) { //confirms both age and name match
                 nameFound = true;
                 std::cout << "\n\nName: " << confirmName << std::endl;
                 std::cout << "Age: " << confirmAge << std::endl << "-------------" << std::endl;
@@ -68,7 +68,7 @@ void viewStat::view() {
         }
 
         else if (nameFound) {
-            if (line == "------------------------") {
+            if (line == "------------------------") { // once found print until it hits this line
                 nameFound = false;
                 confirmName.clear();
             } else {
@@ -78,7 +78,7 @@ void viewStat::view() {
     }
     std::cout << std::endl;
     viewStat.close();
-}
+}//view Function
 
 
 

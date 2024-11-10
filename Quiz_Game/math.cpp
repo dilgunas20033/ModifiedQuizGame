@@ -1,9 +1,10 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: math.cpp
+//Desc: This is the math quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::math() {
     category cat;
@@ -107,4 +108,4 @@ int game::math() {
     std::cout << "You got " << points.math << " out of 10 for math" << std::endl << std::endl;
 
     return points.math;
-}
+}//math Function

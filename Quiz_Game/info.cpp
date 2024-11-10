@@ -1,7 +1,8 @@
-//
-// Created by dilgu on 10/27/2024.
-//
-#include <iostream>
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: info.cpp
+//Desc: Gets info from player, name and age.
+
 #include "info.h"
 
 std::string info::getName() {
@@ -11,7 +12,7 @@ std::string info::getName() {
     getAge();
 
     return name;
-}
+}//getName Function
 
 int info::getAge() {
 
@@ -28,7 +29,7 @@ int info::getAge() {
             "===============";
         }
 
-    } while(age < 16);
+    } while(age < 16); //do/while loop
 
     return age;
-}
+}//getAge Function

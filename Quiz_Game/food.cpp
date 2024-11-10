@@ -1,9 +1,10 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: food.cpp
+//Desc: This is the food quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::food() {
     category cat;
@@ -121,4 +122,4 @@ int game::food() {
     std::cout << "You got " << points.food << " out of 10 for food" << std::endl << std::endl;
 
     return points.food;
-}
+}//food Function

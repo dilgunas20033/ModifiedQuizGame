@@ -1,12 +1,9 @@
-//
-// Created by dilgu on 10/31/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: stats.cpp
+//Desc: This file displays the stats and offers to save it into a txt file for later viewing.
 
 #include "stats.h"
-#include <iostream>
-#include <fstream>
-
-
 
 void stats::stat(const info& info) {
     char save;
@@ -20,7 +17,7 @@ void stats::stat(const info& info) {
     while (index < categories.size()) {
         std::cout << categories[index].first << ": " << *categories[index].second << "/10" << std::endl;
         index++;
-    }
+    } // Loop to display stats
 
     std::cout << "\nWould you like to save?\n(Y/N)" << std::endl << "->";
     std::cin >> save;
@@ -37,14 +34,14 @@ void stats::statSave(const info& info) {
 
     std::string saveStat;
 
-    std::ofstream saveStats("saved_stat.txt", std::ios::app);
+    std::ofstream saveStats("saved_stat.txt", std::ios::app); //opens file
 
-    saveStats << info.name << std::endl << info.age << std::endl;
+    saveStats << info.name << std::endl << info.age << std::endl; //Save name and age
 
     while (index < categories.size()) {
         saveStats << categories[index].first << ": " << *categories[index].second << "/10" << std::endl;
         index++;
-    }
+    } //Loop that starts puting it in the txt file
 
     saveStats << "------------------------" << std::endl;
 

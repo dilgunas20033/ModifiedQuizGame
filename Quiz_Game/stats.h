@@ -1,17 +1,17 @@
-//
-// Created by dilgu on 10/31/2024.
-//
-
-#ifndef QUIZ_GAME_STATS_H
-#define QUIZ_GAME_STATS_H
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: stats.h
+//Desc: This file displays the stats and offers to save it into a txt file for later viewing.
 
 #include "game.h"
 #include "info.h"
 #include "category.h"
 #include <vector>
 
+#ifndef QUIZ_GAME_STATS_H
+#define QUIZ_GAME_STATS_H
 
-class stats : public game {
+class stats {
 public:
     explicit stats(game &score) : categories({
         {"Gaming",       &score.points.gaming},
@@ -22,13 +22,13 @@ public:
         {"Tech",         &score.points.tech},
         {"Sports",       &score.points.sports},
         {"History",      &score.points.history}
-    }) {}
+    }) {} // This makes it easier for stats to be displayed but also easy for the saving
 
-    void stat(const info& info);
-    void statSave(const info& info);
+    void stat(const info& info); // Displays Stats and asked to save
+    void statSave(const info& info); // Saves Stats
 
 private:
-    std::vector<std::pair<std::string, int *>> categories;
+    std::vector<std::pair<std::string, int *>> categories; // For display and saving purposes
 
 };
 

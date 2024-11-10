@@ -1,9 +1,10 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: history.cpp
+//Desc: This is the history quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::history() {
     category cat;
@@ -45,30 +46,15 @@ int game::history() {
         std::cout << std::endl << "Sorry, the correct answer is James Madison." << std::endl << std::endl;
     }
 
-    std::cout << "4) Name one out of the four presidents that are on Mount Rushmore? (NOTE: Do Not Say George Washington)"
-              << std::endl << "->";
-    std::cin >> answer;
-    answer = cat.convertToLowercase(answer);
-    if (answer == "abraham lincoln") {
-        std::cout << std::endl << "Correct!" << std::endl << std::endl;
-        points.history++;
+    std::cout << "4) Which president is on Mount Rushmore?"<< std::endl
+              << "1.Donald Trump\n2.James Madison\n3.Theodore Roosevelt" << std::endl << "->";
+    std::cin >> multiple;
 
-    }
-    if (answer == "thomas jefferson") {
+    if (multiple == "3") {
         std::cout << std::endl << "Correct!" << std::endl << std::endl;
         points.history++;
-    }
-    if (answer == "theodore roosevelt") {
-        std::cout << std::endl << "Correct!" << std::endl << std::endl;
-        points.history++;
-    }
-    if (answer == "george washington") {
-        std::cout << std::endl << "I said don't say him but it is still correct!" << std::endl << std::endl;
-        points.history++;
-    }
-    else {
-        std::cout << std::endl << "Sorry, the correct answer's are Abraham Lincoln, Thomas Jefferson, and Theodore Roosevelt."
-                  << std::endl << std::endl;
+    } else {
+        std::cout << std::endl << "Sorry, the correct answer is Theodore Roosevelt." << std::endl << std::endl;
     }
 
     std::cout << "5) Where was Martin Luther King, Jr. born?"<< std::endl
@@ -132,4 +118,4 @@ int game::history() {
     std::cout << "You got " << points.history << " out of 10 for history" << std::endl << std::endl;
 
     return points.history;
-}
+}//history Function

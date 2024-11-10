@@ -1,9 +1,10 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: sports.cpp
+//Desc: This is the sports quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::sports() {
     category cat;
@@ -25,7 +26,7 @@ int game::sports() {
         std::cout << std::endl << "Sorry, the correct answer is 4." << std::endl << std::endl;
     }
 
-    std::cout << "2) What sport is best known as the ‘king of sports’?" << std::endl
+    std::cout << "2) What sport is best known as the \"king of sports\"?" << std::endl
               << "1.Basketball\n2.Boxing\n3.Soccer" << std::endl << "->";
     std::cin >> multiple;
 
@@ -80,7 +81,7 @@ int game::sports() {
 
     std::cout << "7) How many holes are played in an average round of golf?" << std::endl << "->";
     std::cin >> answer;
-    if (answer == "16") {
+    if (answer == "16" || answer == "18") {
         std::cout << std::endl << "Correct!" << std::endl << std::endl;
         points.sports++;
     } else {
@@ -105,7 +106,7 @@ int game::sports() {
         std::cout << std::endl << "Sorry, the correct answer is 9." << std::endl << std::endl;
     }
 
-    std::cout << "10) In soccer, what body part can’t touch the ball?" << std::endl
+    std::cout << "10) In soccer, what body part can\'t touch the ball?" << std::endl
               << "1.Head\n2.Hands\n3.Feet" << std::endl << "->";
     std::cin >> multiple;
 
@@ -119,4 +120,4 @@ int game::sports() {
     std::cout << "You got " << points.sports << " out of 10 for sports" << std::endl << std::endl;
 
     return points.sports;
-}
+}//sports Function

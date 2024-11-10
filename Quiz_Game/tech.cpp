@@ -1,9 +1,10 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: tech.cpp
+//Desc: This is the tech quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::tech() {
     category cat;
@@ -125,4 +126,4 @@ int game::tech() {
     std::cout << "You got " << points.tech << " out of 10 for tech" << std::endl << std::endl;
 
     return points.tech;
-}
+}//tech Function

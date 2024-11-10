@@ -1,9 +1,10 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: music.cpp
+//Desc: This is the music quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::music() {
     category cat;
@@ -123,4 +124,4 @@ int game::music() {
     std::cout << "You got " << points.music << " out of 10 for music" << std::endl << std::endl;
 
     return points.music;
-}
+}//music Function
