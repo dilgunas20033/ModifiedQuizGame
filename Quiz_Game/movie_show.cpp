@@ -1,14 +1,17 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: movie_show.cpp
+//Desc: This is the movie/show quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::movieShow() {
     category cat;
 
     std::string answer, multiple;
+
+    points.moviesShows = 0;
 
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
@@ -122,4 +125,4 @@ int game::movieShow() {
     std::cout << "You got " << points.moviesShows << " out of 10 for Movies/Shows" << std::endl << std::endl;
 
     return points.moviesShows;
-}
+}//movieShows Function

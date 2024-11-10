@@ -1,14 +1,17 @@
-//
-// Created by dilgu on 10/27/2024.
-//
+//Author: Deividas Ilgunas
+//Date Updated: 11/10/2024
+//File: gaming.cpp
+//Desc: This is the gaming quiz
+
 #include "game.h"
 #include "category.h"
-#include <iostream>
 
 int game::gaming() {
     category cat;
 
     std::string answer, multiple;
+
+    points.gaming = 0;
 
     std::cout << "\n\nThere are 10 questions, answer them correctly you will get a point. \nHave fun!\n\n";
 
@@ -122,4 +125,4 @@ int game::gaming() {
     std::cout << "You got " << points.gaming << " out of 10 for gaming" << std::endl << std::endl;
 
     return points.gaming;
-}
+}//gaming Function

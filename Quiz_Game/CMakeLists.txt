@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.25)
 project(Quiz_Game)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -17,4 +17,8 @@ add_executable(Quiz_Game main.cpp
         tech.cpp
         sports.cpp
         history.cpp
+        stats.cpp
+        stats.h
+        viewStat.cpp
+        viewStat.h
 )
